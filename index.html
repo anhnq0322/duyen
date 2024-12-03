@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Products Showcase</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <header class="bg-black text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold">Apple Product Showcase</h1>
+            <p class="mt-2 text-gray-300">Khám phá những sản phẩm đột phá</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-16 product-card bg-white shadow-lg rounded-lg overflow-hidden">
+            <div class="md:flex">
+                <div class="md:w-1/2">
+                    <img src="https://www.svstore.vn/uploads/source/iphone-15prm/iphone-15-pro-finish-select-202309-6-7inch-geo-us.jpg"
+                        alt="iPhone 15 Pro" class="w-full h-80 object-cover">
+                </div>
+                <div class="md:w-1/2 p-6">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">iPhone 15 Pro</h2>
+                    <p class="text-gray-600 mb-4">
+                        Chiếc smartphone mạnh mẽ nhất của Apple với chip A17 Pro,
+                        hệ thống camera chuyên nghiệp và khung titan bền bỉ.
+                        Thiết kế sang trọng với nút Action mới và công nghệ Dynamic Island ấn tượng.
+                    </p>
+                    <ul class="mb-4 text-gray-700">
+                        <li>• Chip A17 Pro hiệu năng cao</li>
+                        <li>• Hệ thống camera 48MP</li>
+                        <li>• Màn hình Super Retina XDR</li>
+                    </ul>
+                    <button class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
+                        Tìm hiểu thêm
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16 product-card bg-white shadow-lg rounded-lg overflow-hidden">
+            <div class="md:flex flex-row-reverse">
+                <div class="md:w-1/2">
+                    <img src="https://www.svstore.vn/uploads/source/macbook-air-m1/macbook-air-trio-transparent.png"
+                        alt="MacBook Air" class="w-full h-80 object-cover">
+                </div>
+                <div class="md:w-1/2 p-6">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">MacBook Air M1</h2>
+                    <p class="text-gray-600 mb-4">
+                        Laptop mỏng nhẹ với chip M2 mạnh mẽ, thiết kế sang trọng
+                        và pin lên đến 18 giờ. Màn hình Liquid Retina sắc nét,
+                        hoàn hảo cho công việc và giải trí.
+                    </p>
+                    <ul class="mb-4 text-gray-700">
+                        <li>• Chip M2 hiệu suất cao</li>
+                        <li>• Thiết kế mỏng 11.3mm</li>
+                        <li>• Màn hình Liquid Retina</li>
+                    </ul>
+                    <button class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition">
+                        Chi tiết sản phẩm
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-card bg-white shadow-lg rounded-lg overflow-hidden">
+            <div class="md:flex">
+                <div class="md:w-1/2">
+                    <img src="https://www.svstore.vn/uploads/source/airpod/mwp22.jpg" alt="AirPods Pro"
+                        class="w-full h-80 object-cover">
+                </div>
+                <div class="md:w-1/2 p-6">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">AirPods Pro</h2>
+                    <p class="text-gray-600 mb-4">
+                        Tai nghe không dây thế hệ mới với công nghệ chống ồn
+                        tiên tiến, chất lượng âm thanh vượt trội và thiết kế
+                        thoải mái. Tích hợp chip H2 giúp xử lý âm thanh nhanh và chính xác.
+                    </p>
+                    <ul class="mb-4 text-gray-700">
+                        <li>• Chống ồn thích ứng</li>
+                        <li>• Âm thanh không gian</li>
+                        <li>• Thời lượng pin 6 giờ</li>
+                    </ul>
+                    <button class="bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700 transition">
+                        Khám phá ngay
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6 text-center">
+        <p>© 2024 Apple Product Showcase. Thiết kế bởi Lê Thị Khả Duyên_3121560017</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                anime({
+                    targets: card,
+                    scale: 1.02,
+                    duration: 300,
+                    easing: 'easeInOutQuad'
+                });
+            });
+
+            card.addEventListener('mouseleave', () => {
+                anime({
+                    targets: card,
+                    scale: 1,
+                    duration: 300,
+                    easing: 'easeInOutQuad'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
